@@ -22,7 +22,6 @@ const date = new Date();
 // );
 
 // 2. Write a JavaScript program to print the current window contents.
-// Click me to see the solution
 
 // console.log(window.print());
 
@@ -49,5 +48,16 @@ const date = new Date();
 // 4. Write a JavaScript program to find the area of a triangle where three sides are 5, 6, 7.
 // formula = √[s × (s – a) × (s – b) × (s – c)].
 
-const semiParameter = (5 + 6 + 7) / 2;
-const area = Math.sqrt(s * (s - 5) * (s - 6) * (s - 7));
+// const semiParameter = (5 + 6 + 7) / 2;
+// const area = Math.sqrt(s * (s - 5) * (s - 6) * (s - 7));
+
+// 5. Write a JavaScript program to rotate the string 'w3resource' in the right direction. This is done by periodically removing one letter from the string end and attaching it to the front
+
+let rotateString = "w3resource";
+setInterval(() => {
+  const a =
+    rotateString[rotateString.length - 1] +
+    rotateString.substring(0, rotateString.length - 1);
+  rotateString = a;
+  console.log(a);
+}, 500);
