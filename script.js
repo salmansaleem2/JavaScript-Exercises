@@ -2,21 +2,26 @@
 // Sample Output : Today is : Tuesday.
 // Current time is : 10 PM : 30 : 38
 
-const date = new Date();
-const days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
+// const date = new Date();
+// const days = [
+//   "Sunday",
+//   "Monday",
+//   "Tuesday",
+//   "Wednesday",
+//   "Thursday",
+//   "Friday",
+//   "Saturday",
+// ];
 
-console.log(`Today is : ${days[date.getDay()]}`);
+// console.log(`Today is : ${days[date.getDay()]}`);
 
-console.log(
-  `Current time is ${
-    date.getHours() > 12 ? date.getHours() - 12 + " pm" : date.getHours() + "am"
-  } : ${date.getMinutes()} : ${date.getSeconds()}`
-);
+// console.log(
+//   `Current time is ${
+//     date.getHours() > 12 ? date.getHours() - 12 + " pm" : date.getHours() + "am"
+//   } : ${date.getMinutes()} : ${date.getSeconds()}`
+// );
+
+// 2. Write a JavaScript program to print the current window contents.
+// Click me to see the solution
+
+console.log(window.print());
