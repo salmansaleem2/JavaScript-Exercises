@@ -30,18 +30,24 @@ const date = new Date();
 // Expected Output :
 // mm-dd-yyyy, mm/dd/yyyy or dd-mm-yyyy, dd/mm/yyyy
 
-console.log(
-  `${
-    String(date.getMonth()).length === 1
-      ? "0" + date.getMonth()
-      : date.getMonth()
-  }-${
-    String(date.getDay()).length === 1 ? "0" + date.getDay() : date.getDay()
-  }-${date.getFullYear()}, ${
-    String(date.getMonth()).length === 1
-      ? "0" + date.getMonth()
-      : date.getMonth()
-  }/${
-    String(date.getDay()).length === 1 ? "0" + date.getDay() : date.getDay()
-  }/${date.getFullYear()} `
-);
+// console.log(
+//   `${
+//     String(date.getMonth()).length === 1
+//       ? "0" + date.getMonth()
+//       : date.getMonth()
+//   }-${
+//     String(date.getDay()).length === 1 ? "0" + date.getDay() : date.getDay()
+//   }-${date.getFullYear()}, ${
+//     String(date.getMonth()).length === 1
+//       ? "0" + date.getMonth()
+//       : date.getMonth()
+//   }/${
+//     String(date.getDay()).length === 1 ? "0" + date.getDay() : date.getDay()
+//   }/${date.getFullYear()} `
+// );
+
+// 4. Write a JavaScript program to find the area of a triangle where three sides are 5, 6, 7.
+// formula = √[s × (s – a) × (s – b) × (s – c)].
+
+const semiParameter = (5 + 6 + 7) / 2;
+const area = Math.sqrt(s * (s - 5) * (s - 6) * (s - 7));
