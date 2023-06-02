@@ -2,7 +2,7 @@
 // Sample Output : Today is : Tuesday.
 // Current time is : 10 PM : 30 : 38
 
-// const date = new Date();
+const date = new Date();
 // const days = [
 //   "Sunday",
 //   "Monday",
@@ -24,4 +24,24 @@
 // 2. Write a JavaScript program to print the current window contents.
 // Click me to see the solution
 
-console.log(window.print());
+// console.log(window.print());
+
+// 3. Write a JavaScript program to get the current date.
+// Expected Output :
+// mm-dd-yyyy, mm/dd/yyyy or dd-mm-yyyy, dd/mm/yyyy
+
+console.log(
+  `${
+    String(date.getMonth()).length === 1
+      ? "0" + date.getMonth()
+      : date.getMonth()
+  }-${
+    String(date.getDay()).length === 1 ? "0" + date.getDay() : date.getDay()
+  }-${date.getFullYear()}, ${
+    String(date.getMonth()).length === 1
+      ? "0" + date.getMonth()
+      : date.getMonth()
+  }/${
+    String(date.getDay()).length === 1 ? "0" + date.getDay() : date.getDay()
+  }/${date.getFullYear()} `
+);
