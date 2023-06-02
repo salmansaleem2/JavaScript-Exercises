@@ -53,11 +53,23 @@ const date = new Date();
 
 // 5. Write a JavaScript program to rotate the string 'w3resource' in the right direction. This is done by periodically removing one letter from the string end and attaching it to the front
 
-let rotateString = "w3resource";
-setInterval(() => {
-  const a =
-    rotateString[rotateString.length - 1] +
-    rotateString.substring(0, rotateString.length - 1);
-  rotateString = a;
-  console.log(a);
-}, 500);
+// let rotateString = "w3resource";
+// setInterval(() => {
+//   const a =
+//     rotateString[rotateString.length - 1] +
+//     rotateString.substring(0, rotateString.length - 1);
+//   rotateString = a;
+//   console.log(a);
+// }, 500);
+
+// 6. Write a JavaScript program to determine whether a given year is a leap year in the Gregorian calendar.
+
+const isLeapYear = (isLeapYear) => {
+  // console.log(isLeapYear % 100 !== 0);
+  return isLeapYear % 100 === 0 ? isLeapYear % 400 === 0 : isLeapYear % 4 === 0;
+};
+console.log(isLeapYear(2016));
+console.log(isLeapYear(2000));
+console.log(isLeapYear(1700));
+console.log(isLeapYear(1800));
+console.log(isLeapYear(100));
