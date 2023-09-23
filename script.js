@@ -64,12 +64,50 @@ const date = new Date();
 
 // 6. Write a JavaScript program to determine whether a given year is a leap year in the Gregorian calendar.
 
-const isLeapYear = (isLeapYear) => {
-  // console.log(isLeapYear % 100 !== 0);
-  return isLeapYear % 100 === 0 ? isLeapYear % 400 === 0 : isLeapYear % 4 === 0;
+// console.log(isLeapYear % 100 !== 0);
+// const isLeapYear = (isLeapYear) => {
+//   return isLeapYear % 100 === 0 ? isLeapYear % 400 === 0 : isLeapYear % 4 === 0;
+// };
+// console.log(isLeapYear(2016));
+// console.log(isLeapYear(2000));
+// console.log(isLeapYear(1700));
+// console.log(isLeapYear(1800));
+// console.log(isLeapYear(100));
+
+// write a function that counts the occurrences of both letters and numbers in a given string?
+const occurance = (string1, string2) => {
+  // how many times  each char ocurrance in stirng
+  const obj1 = {};
+  const obj2 = {};
+
+  for (item of string1) {
+    obj1[item] = (obj1[item] || 0) + 1;
+  }
+
+  for (item of string2) {
+    obj2[item] = (obj2[item] || 0) + 1;
+  }
+
+  // console.log(JSON.stringify(obj1) === JSON.stringify(obj2));
+
+  // Compare the two objects
+  const keys1 = Object.keys(obj1);
+  const keys2 = Object.keys(obj2);
+
+  if (keys1.length !== keys2.length) {
+    console.log(false);
+    return;
+  }
+
+  for (const key of keys1) {
+    if (obj1[key] !== obj2[key]) {
+      console.log(false);
+      return;
+    }
+  }
+  console.log(true);
+
+  // console.log(obj1, obj2);
 };
-console.log(isLeapYear(2016));
-console.log(isLeapYear(2000));
-console.log(isLeapYear(1700));
-console.log(isLeapYear(1800));
-console.log(isLeapYear(100));
+
+occurance("aazx", "xzaa");
